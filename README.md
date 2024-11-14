@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Connect a Wallet on Flow Blockchain Cadence Environment
+
+This repository provides a quickstart guide to connect a wallet on the Flow Blockchain using the Cadence environment. Connecting a wallet is essential for secure transactions and interacting with dApps on Flow.
+
+Follow along with the **[tutorial here](https://flowfoundation.notion.site/Connect-a-Wallet-on-Flow-Blockchain-Cadence-Environment-13e1aee1232480e59f74ef956f6a1ddd)** for a step-by-step guide. This setup supports Flow-native wallets, like **Flow Wallet** and **Blocto**.
+
+For more on connecting a wallet in the Flow EVM environment, check out the **[Telegram Wallet Guide for Flow EVM](https://www.notion.so/Connect-a-Telegram-Embedded-Wallet-UXUY-on-Flow-EVM-13e1aee12324809c800fda6c3186d10e?pvs=21)**.
+
+## Overview
+
+This example includes:
+- Setting up a **Next.js project** with **TypeScript** and **App Router**
+- Configuring Flow for mainnet/testnet
+- Custom hooks and contexts for user authentication with Flow
+- A sample wallet connection interface with optional Tailwind CSS styling
+
+## Quickstart
+
+Clone the repository or use it as a reference:
+
+[GitHub Repository](https://github.com/bz-hashtag-0780/fcl-wallet-discovery) | [Live Demo](https://fcl-wallet-discovery.vercel.app/)
 
 ## Getting Started
 
-First, run the development server:
+1. **Set Up Next.js with TypeScript**:
+   ```bash
+   npx create-next-app@latest my-app --typescript
+   cd my-app
+   npm install --save @onflow/fcl @onflow/types
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. **Flow Configuration**:
+   In `flow-config.ts`, configure `accessNode.api`, `flow.network`, and `discovery.wallet`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Authentication Hook**:
+   Use the `useCurrentUser` hook for logging in and out of Flow wallets.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. **Auth Context Setup**:
+   Create `AuthContext.tsx` to manage wallet connection state globally.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5. **UI Setup**:
+   Add a simple connect/disconnect button in your main `page.tsx`.
 
-## Learn More
+6. **Optional Styling**:
+   Use Tailwind CSS for basic UI styling.
 
-To learn more about Next.js, take a look at the following resources:
+## Conclusion
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+By following these steps, you’ll have a Next.js application that enables wallet connection on Flow Cadence, ready for user interaction with Flow-native wallets.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For further details, please refer to the **[tutorial on Notion](https://flowfoundation.notion.site/Connect-a-Wallet-on-Flow-Blockchain-Cadence-Environment-13e1aee1232480e59f74ef956f6a1ddd)**.
