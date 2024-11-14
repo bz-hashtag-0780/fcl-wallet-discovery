@@ -2,7 +2,7 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { createContext, useContext } from 'react';
-import useCurrentUser from '@/hooks/user-current-user.hook';
+import useCurrentUser from '@/hooks/use-current-user.hook';
 
 interface AuthContextType {
 	user: any;
